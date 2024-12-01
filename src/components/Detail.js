@@ -12,7 +12,7 @@ const Detail = ({ route }) => {
       setRecord(data);
     };
     getRecordDetail();
-  }, [id]);
+  }, [id]); //Ensures the effect runs when the ID changes
 
   return (
     <View style={styles.container}>

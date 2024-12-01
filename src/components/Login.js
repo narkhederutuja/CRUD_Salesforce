@@ -5,6 +5,7 @@ import { SalesforceOAuth } from 'react-native-force';
 const Login = ({ navigation }) => {
   const handleLogin = async () => {
     try {
+      //Initiates the OAuth flow, prompting the user to authenticate with Salesforce.
       const loginInfo = await SalesforceOAuth.login();
       console.log("Login Successful: ", loginInfo);
       navigation.navigate('Home');

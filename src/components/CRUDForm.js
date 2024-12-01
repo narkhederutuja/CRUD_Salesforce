@@ -9,8 +9,10 @@ const CRUDForm = ({ route, navigation }) => {
 
   const handleSubmit = async () => {
     if (id) {
+     // If id is present,update the existing contact.
       await updateContact(id, { Name: name, Phone: phone });
     } else {
+      //create a new contact.
       await createContact({ Name: name, Phone: phone });
     }
     await syncUpContacts();

@@ -15,6 +15,8 @@ const Home = ({ navigation }) => {
     initData();
   }, []);
 
+
+  //syncing with local storage and slfc cloud
   const handleSyncUp = async () => {
     await syncUpForcereactContacts();
     const data = await fetchForcereactLocalContacts();
